@@ -1,0 +1,3 @@
+For importing Xforms that was either exported by openxdata or converted by a tool like the oc-conversion-tools.
+
+It extracts a study from the given xml. The study should be displayable in openxdata.
