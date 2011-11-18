@@ -32,7 +32,7 @@ class StudyImporterTest extends GroovyTestCase {
 
 	@Test void testImportStudyReturnsValidStudyWithName(){
 
-		assertEquals 'test', study.toString()
+		assertEquals 'test', study.getName()
 	}
 
 	@Test void testImportStudyReturnsValidStudyWithNameOnToString(){
