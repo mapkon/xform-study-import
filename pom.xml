@@ -148,9 +148,9 @@
 	</profiles>
 
 	<scm>
-		<connection>scm:git:https://github.com/mapkon/oc-conversion-tools</connection>
-		<developerConnection>scm:git:https://github.com/mapkon/oc-conversion-tools</developerConnection>
-		<url>https://github.com/mapkon/oc-conversion-tools</url>
+		<connection>scm:git:https://github.com/mapkon/xform-study-import</connection>
+		<developerConnection>scm:git:https://github.com/mapkon/xform-study-import</developerConnection>
+		<url>https://github.com/mapkon/xform-study-import</url>
 	</scm>
 
 	<distributionManagement>
