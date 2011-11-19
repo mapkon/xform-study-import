@@ -181,6 +181,7 @@ class StudyImporterTest extends GroovyTestCase {
 		def versionText = version.getXform()
 		
 		assertNotNull versionText
+		assertTrue versionText instanceof String
 	}
 	
 	@Test void testImportStudyReturnsValidStudyWithFormVersionHavingXformText2() {
@@ -191,6 +192,7 @@ class StudyImporterTest extends GroovyTestCase {
 		def versionText = version.getXform()
 		
 		assertNotNull versionText 
+		assertTrue versionText instanceof String
 	}
 	
 	@Test void testImportStudyReturnsValidStudyWithFormVersionHavingXformText3() {
@@ -201,6 +203,7 @@ class StudyImporterTest extends GroovyTestCase {
 		def versionText = version.getXform()
 		
 		assertNotNull versionText
+		assertTrue versionText instanceof String
 	}
 	
 	@Test void testImportStudyReturnsValidStudyWithFormVersionHavingXformText4() {
@@ -211,6 +214,7 @@ class StudyImporterTest extends GroovyTestCase {
 		def versionText = version.getXform()
 		
 		assertNotNull versionText
+		assertTrue versionText instanceof String
 	}
 	
 	def xmlString = '''<study name='test' description='Test Study' studyKey='Test Key'>
