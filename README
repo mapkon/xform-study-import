@@ -1,4 +1,5 @@
-For importing Xforms that was either exported by openxdata or converted by a tool like the oc-conversion-tools. It extracts a study from the given xml. The study should be displayable in openxdata.
+For importing XML that was either exported by openxdata or converted by a tool like the oc-conversion-tools. It extracts a study from the given xml with corresponding child items like forms and versions. The study should be displayable in openxdata.
+
 This library is meant to be used as a dependency in the openxdata API. The API should pass the XML to the library and expect a valid StudyDef to be returned for saving.
 
 For setup:
