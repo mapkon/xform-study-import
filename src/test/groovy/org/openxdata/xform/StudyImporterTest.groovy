@@ -1,4 +1,4 @@
-package org.openxdata.server.xform
+package org.openxdata.xform
 
 import org.junit.Before
 import org.junit.Test

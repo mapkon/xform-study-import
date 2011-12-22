@@ -1,4 +1,4 @@
-package org.openxdata.server.xform
+package org.openxdata.xform
 
 import org.openxdata.server.admin.model.FormDef
 import org.openxdata.server.admin.model.FormDefVersion
