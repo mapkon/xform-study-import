@@ -124,7 +124,6 @@ class StudyImporterTest extends GroovyTestCase {
 				
 		def form1 = forms[0]
 		
-		assertNotNull form1.getDefaultVersion()
 		assertEquals  'Test Version', form1.getDefaultVersion().getName()
 		
 	}
@@ -133,7 +132,6 @@ class StudyImporterTest extends GroovyTestCase {
 
 		def form2 = forms[1]
 
-		assertNotNull form2.getDefaultVersion()
 		assertEquals  'Test Version 2', form2.getDefaultVersion().getName()
 	}
 	
@@ -180,7 +178,6 @@ class StudyImporterTest extends GroovyTestCase {
 		def version = form.getVersion('Test Version')
 		def versionText = version.getXform()
 		
-		assertNotNull versionText
 		assertTrue versionText instanceof String
 	}
 	
@@ -191,7 +188,6 @@ class StudyImporterTest extends GroovyTestCase {
 		def version = form.getVersion('Test Version 1')
 		def versionText = version.getXform()
 		
-		assertNotNull versionText 
 		assertTrue versionText instanceof String
 	}
 	
@@ -202,7 +198,6 @@ class StudyImporterTest extends GroovyTestCase {
 		def version = form.getVersion('Test Version 2')
 		def versionText = version.getXform()
 		
-		assertNotNull versionText
 		assertTrue versionText instanceof String
 	}
 	
@@ -213,7 +208,6 @@ class StudyImporterTest extends GroovyTestCase {
 		def version = form.getVersion('Test Version 3')
 		def versionText = version.getXform()
 		
-		assertNotNull versionText
 		assertTrue versionText instanceof String
 	}
 	
