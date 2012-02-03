@@ -144,6 +144,18 @@ class StudyImporterTest extends GroovyTestCase {
 		assertNotNull version.getXform()
 	}
 	
+	@Test void testImportStudyReturnsValidStudyWithValidXformElement() {
+		def form = study.getForm('Test Form')
+		
+		def version = form.getVersion('Test Version')
+		
+		def xform = version.getXform()
+		
+		def xformText = new XmlSlurper().parseText(xform)
+		
+		assertEquals 'xforms', xformText.name()
+	}
+	
 	@Test void testImportStudyReturnsValidStudyWithFormVersionHavingXform2() {
 		
 		def form = study.getForm('Test Form')
@@ -151,6 +163,18 @@ class StudyImporterTest extends GroovyTestCase {
 		def version = form.getVersion('Test Version 1')
 		
 		assertNotNull version.getXform()
+	}
+	
+	@Test void testImportStudyReturnsValidStudyWithValidXformElement2() {
+		def form = study.getForm('Test Form')
+		
+		def version = form.getVersion('Test Version 1')
+		
+		def xform = version.getXform()
+		
+		def xformText = new XmlSlurper().parseText(xform)
+		
+		assertEquals 'xforms', xformText.name()
 	}
 	
 	@Test void testImportStudyReturnsValidStudyWithFormVersionHavingXform3() {
@@ -162,6 +186,18 @@ class StudyImporterTest extends GroovyTestCase {
 		assertNotNull version.getXform()
 	}
 	
+	@Test void testImportStudyReturnsValidStudyWithValidXformElement3() {
+		def form = study.getForm('Test Form 1')
+		
+		def version = form.getVersion('Test Version 2')
+		
+		def xform = version.getXform()
+		
+		def xformText = new XmlSlurper().parseText(xform)
+		
+		assertEquals 'xforms', xformText.name()
+	}
+	
 	@Test void testImportStudyReturnsValidStudyWithFormVersionHavingXform4() {
 		
 		def form = study.getForm('Test Form 1')
@@ -169,6 +205,18 @@ class StudyImporterTest extends GroovyTestCase {
 		def version = form.getVersion('Test Version 3')
 		
 		assertNotNull version.getXform()
+	}
+	
+	@Test void testImportStudyReturnsValidStudyWithValidXformElement4() {
+		def form = study.getForm('Test Form 1')
+		
+		def version = form.getVersion('Test Version 3')
+		
+		def xform = version.getXform()
+		
+		def xformText = new XmlSlurper().parseText(xform)
+		
+		assertEquals 'xforms', xformText.name()
 	}
 	
 	@Test void testImportStudyReturnsValidStudyWithFormVersionHavingXformText() {
@@ -218,9 +266,9 @@ class StudyImporterTest extends GroovyTestCase {
 								&lt;xf:xforms xmlns:xf=&quot;http://www.w3.org/2002/xforms&quot;
 								xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#10;
 									&lt;xf:model&gt;&#10;
-										&lt;xf:instance id=&quot;test&quot;&gt;&#10;/xf:instance&gt;
-									&lt;/model&gt;
-									&lt;/xform&gt;
+										&lt;xf:instance id=&quot;test&quot;&gt;&#10;&lt;/xf:instance&gt;&#10;
+									&lt;/xf:model&gt;
+									&lt;/xf:xforms&gt;
 							</xform>
 						 </version>
 						 <version name='Test Version 1'>
@@ -228,9 +276,9 @@ class StudyImporterTest extends GroovyTestCase {
 								&lt;xf:xforms xmlns:xf=&quot;http://www.w3.org/2002/xforms&quot;
 								xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#10;
 									&lt;xf:model&gt;&#10;
-										&lt;xf:instance id=&quot;test&quot;&gt;&#10;/xf:instance&gt;
-									&lt;/model&gt;
-									&lt;/xform&gt;
+										&lt;xf:instance id=&quot;test&quot;&gt;&#10;&lt;/xf:instance&gt;
+									&lt;/xf:model&gt;
+									&lt;/xf:xforms&gt;
 							</xform>
 						 </version>
 						</form>
@@ -240,9 +288,9 @@ class StudyImporterTest extends GroovyTestCase {
 								&lt;xf:xforms xmlns:xf=&quot;http://www.w3.org/2002/xforms&quot;
 								xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#10;
 									&lt;xf:model&gt;&#10;
-										&lt;xf:instance id=&quot;test&quot;&gt;&#10;/xf:instance&gt;
-									&lt;/model&gt;
-									&lt;/xform&gt;
+										&lt;xf:instance id=&quot;test&quot;&gt;&#10;&lt;/xf:instance&gt;
+									&lt;/xf:model&gt;
+									&lt;/xf:xforms&gt;
 							</xform>
 						 </version>
 						 <version name='Test Version 3'>
@@ -250,9 +298,9 @@ class StudyImporterTest extends GroovyTestCase {
 								&lt;xf:xforms xmlns:xf=&quot;http://www.w3.org/2002/xforms&quot;
 								xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#10;
 									&lt;xf:model&gt;&#10;
-										&lt;xf:instance id=&quot;test&quot;&gt;&#10;/xf:instance&gt;
-									&lt;/model&gt;
-									&lt;/xform&gt;
+										&lt;xf:instance id=&quot;test&quot;&gt;&#10;&lt;/xf:instance&gt;
+									&lt;/xf:model&gt;
+									&lt;/xf:xforms&gt;
 							</xform>
 						 </version>
 						</form>
