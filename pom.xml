@@ -35,10 +35,6 @@
 
 	<repositories>
 		<repository>
-			<id>org.codehaus</id>
-			<url>http://snapshots.repository.codehaus.org</url>
-		</repository>
-		<repository>
 			<id>openxdata</id>
 			<url>http://nexus.openxdata.org/content/groups/public</url>
 			<snapshots>
