@@ -1,10 +1,13 @@
 package org.openxdata.xform
 
+import groovy.util.logging.Log
+
 import org.openxdata.server.admin.model.FormDef
 import org.openxdata.server.admin.model.FormDefVersion
 import org.openxdata.server.admin.model.StudyDef
 
 
+@Log
 class StudyImporter {
 
 	def xml
@@ -16,6 +19,7 @@ class StudyImporter {
 
 	def extractStudy() {
 
+		log.info("Extracting study properties...")
 		setStudyName()
 		setStudyDescription()
 		setStudyKey()
@@ -26,16 +30,25 @@ class StudyImporter {
 	}
 
 	private setStudyName(){
+		
+		log.info("Setting Study Name")
+		
 		def studyName = xml.@name.text()
 		study.setName(studyName)
 	}
 
 	private setStudyDescription(){
+		
+		log.info("Setting Study Description")
+		
 		def studyDescription = xml.@description.text()
 		study.setDescription(studyDescription)
 	}
 
 	private setStudyKey(){
+		
+		log.info("Setting Study Key")
+		
 		def studyKey = xml.@studyKey.text()
 		study.setStudyKey(studyKey)
 	}
@@ -52,6 +65,9 @@ class StudyImporter {
 	}
 
 	private createForm(def formNode) {
+		
+		log.info("Creating Study Form(s)")
+		
 		def form = new FormDef()
 
 		def formName = formNode.@name.text()
@@ -68,6 +84,9 @@ class StudyImporter {
 	}
 	
 	private createFormVersions(def formNode){
+		
+		log.info("Creating Study Form Versions")
+		
 		def versions = []
 		formNode.version.each {
 			def version = extractFormVersion(it)
@@ -78,6 +97,7 @@ class StudyImporter {
 	}
 	
 	private extractFormVersion(def versionNode){
+		
 		def version = new FormDefVersion()
 		
 		def versionName = versionNode.@name.text()
@@ -87,6 +107,9 @@ class StudyImporter {
 		version.setDescription(versionDescription)
 		
 		def xform = versionNode.xform[0].text()
+		
+		xform = xform.replaceFirst("<?xml version=\"1.0\" encoding=\"UTF-8\"?>null", "");
+		
 		version.setXform(xform)
 		
 		return version
